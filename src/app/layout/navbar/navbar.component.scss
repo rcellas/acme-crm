@@ -1,0 +1,14 @@
+
+@import '../../../styles.scss';
+
+:host {
+    grid-row:span 2;
+    background-color: #FF9900;
+    @include center;
+}
+
+@media(max-width: 368px){
+    :host{
+        display:none;
+    }
+}

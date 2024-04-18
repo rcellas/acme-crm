@@ -1,0 +1,8 @@
+
+@import '../../../styles.scss';
+
+:host {
+
+    background-color: #4388CC;
+    @include center;
+}
