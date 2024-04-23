@@ -1,9 +1,20 @@
-<p>navbar works!</p>
-
-<nav>
-  <ul>
-    <li><a routerLinkActive="active" [routerLink]="['/customer']">Customer</a></li>
-    <li><a routerLinkActive="active" [routerLink]="['/product']">Product</a></li>
-    <li><a routerLinkActive="active" [routerLink]="['/order']">Order</a></li>
-  </ul>
-</nav>
+<!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <mat-nav-list>
+      <li><a routerLinkActive="active" [routerLink]="['/product']">Product</a></li>
+      <li><a routerLinkActive="active" [routerLink]="['/order']">Order</a></li>
+    </mat-nav-list></mat-sidenav>
+  <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
+  Implicit main content
+</mat-sidenav-container> -->
+<mat-sidenav-container>
+<mat-sidenav-content>
+  <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+  <p>Events:</p>
+  <div class="example-events">
+    @for (e of events; track e) {
+      <div>{{e}}</div>
+    }
+  </div>
+</mat-sidenav-content>
+</mat-sidenav-container>
