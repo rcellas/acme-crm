@@ -12,6 +12,7 @@ export class CustomerDetailComponent implements OnInit{
   customer!:string;
 
   ngOnInit(): void {
+    console.log(this.id)
     this.customer = this.id
   }
 }

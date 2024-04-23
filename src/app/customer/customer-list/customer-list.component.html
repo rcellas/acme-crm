@@ -1,1 +1,6 @@
-<p>customer-list works!</p>
+<h1>Products</h1>
+<ul>
+  @for (customer of customers; track trackCustomer) {
+  <li><a [routerLink]="['/customer/detail/',customer.id]">{{$index}} - {{ customer.name }} : @if($even) {even} @else{odd}</a></li>
+  }
+</ul>

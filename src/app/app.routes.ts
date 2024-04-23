@@ -6,42 +6,45 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { NotfoundpageComponent } from './notfoundpage/notfoundpage.component';
 import { LoginComponent } from './auth/login/login.component';
 import { LayoutComponent } from './layout/layout/layout.component';
+import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
 
 export const routes: Routes = [
-    {
-        path:'',
-        component:LayoutComponent,
-        children:[
-            {
-                path:'',
-                component:DashboardComponent
-            },
-            {
-                path:'dashboard',
-                redirectTo:''
-            },
-            {
-                path:'customer',
-                component:CustomerListComponent
-            },
-            
-            {
-                path:'order',
-                component:OrderListComponent
-            },
-            {
-                path:'product',
-                component:ProductListComponent
-            },
-
-        ]
-    },
-    {
-        path:'login',
-        component:LoginComponent
-    },
-    {
-        path:'**',
-        component:NotfoundpageComponent
-    }
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+      },
+      {
+        path: 'dashboard',
+        redirectTo: '',
+      },
+      {
+        path: 'customer',
+        component: CustomerListComponent,
+      },
+      {
+        path: 'detail/:id',
+        component: CustomerDetailComponent,
+      },
+      {
+        path: 'order',
+        component: OrderListComponent,
+      },
+      {
+        path: 'product',
+        component: ProductListComponent,
+      },
+    ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: '**',
+    component: NotfoundpageComponent,
+  },
 ];
