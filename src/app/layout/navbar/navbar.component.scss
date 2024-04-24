@@ -1,11 +1,14 @@
 @import "../../../styles.scss";
 
 :host{
-  @include center;
+  grid-row: span 3;
+  display: flex;
+  flex-direction: column;
 }
 
 .active {
   background-color: red;
+
 }
 
 @media(max-width:368px){

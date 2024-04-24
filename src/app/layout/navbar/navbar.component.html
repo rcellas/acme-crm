@@ -1,20 +1,20 @@
-<!-- <mat-sidenav-container class="example-container">
-  <mat-sidenav opened mode="side">
-    <mat-nav-list>
-      <li><a routerLinkActive="active" [routerLink]="['/product']">Product</a></li>
-      <li><a routerLinkActive="active" [routerLink]="['/order']">Order</a></li>
-    </mat-nav-list></mat-sidenav>
-  <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
-  Implicit main content
-</mat-sidenav-container> -->
-<mat-sidenav-container>
-<mat-sidenav-content>
-  <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
-  <p>Events:</p>
-  <div class="example-events">
-    @for (e of events; track e) {
-      <div>{{e}}</div>
-    }
-  </div>
-</mat-sidenav-content>
+<!-- haz un sidenav que incluyan las rutas pertinente y basico, la info del menu se tiene que ver en forma de lista y que sean ancords pero con [routerLink]. el sidenav tiene que abrir y cerrar -->
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    opened
+    class="example-sidenav"
+    [fixedInViewport]="options.value.fixed"
+    [fixedTopGap]="options.value.top"
+    [fixedBottomGap]="options.value.bottom"
+  >
+  <mat-nav-list>
+    <a [routerLink]="['/product']">Producto</a>
+    <a [routerLink]="['/order']">Order</a>
+    <a [routerLink]="['/customer']">Customer</a>
+  </mat-nav-list>
+  </mat-sidenav>
 </mat-sidenav-container>
+
